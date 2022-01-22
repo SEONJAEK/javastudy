@@ -26,8 +26,7 @@ public class CalcApp {
 			int lValue = Integer.parseInt( tokens[ 0 ] );
 			int rValue = Integer.parseInt( tokens[ 2 ] );
 			
-			String mark = tokens[1];
-			switch( mark ) {
+			switch(tokens[1]) {
 				case "+" : {
 					Add add = new Add();
 					add.setValue( lValue, rValue );

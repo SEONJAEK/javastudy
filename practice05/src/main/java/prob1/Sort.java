@@ -1,4 +1,4 @@
-package prob1;
+ package prob1;
 
 public class Sort {
 	
@@ -6,17 +6,29 @@ public class Sort {
 	
 		int array[] = { 5, 9, 3, 8, 60, 20, 1 };
 		int count =  array.length;
-		
+		int array2[] = new int[count];
 		System.out.println( "Before sort." );
+		int n = array.length;
+		
+		for(int i=1; i<n; i++) {
+			for(int j=0; j<n-i; j++) {
+				if (array[j]>array[j+1]) {
+					int temp = array[j];
+					array[j] = array[j+1];
+					array[j+1] = temp;
+				}
+			}
+		}
 		
 		for (int i = 0; i < count; i++) {
 			System.out.print( array[ i ] + " " );
 		}
 		
-		//
-		// 정렬 알고리즘이 적용된 코드를 여기에 작성합니다.
-		//
-
+		for(int i=0; i<n; i++) {
+			array2[n-i-1] = array[i];
+		}
+		
+		array = array2 ;
 		
 		// 결과 출력
 		System.out.println( "\nAfter Sort." );
